@@ -35,6 +35,11 @@ header {
   text-align: center;
 }
 
+header + p {
+  padding: 10px;
+  text-align: left;
+}
+
 .example1 {
   width: 90%;
   max-width: 900px;
@@ -44,26 +49,130 @@ header {
 
 .example1 .box {
   float: left;
+  margin-right: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
+/* The proper fix with display: flow-root */
+.wrapper {
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
+  display: flow-root;
+}
+
+/* The clearfx hack */
+/* .wrapper::after {
+  content: "";
+  clear: both;
+  display: block;
+} */
+
+/* The overflow hack */
+/* .wrapper {
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
+  overflow: auto;
+} */
+
+.assessment1 {
+  /* background-color: #fff; */
+  color: #333;
+  /* font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif; */
+  padding: 1em;
+  margin: 0;
+  border: 2px inset black;
+  display: flow-root;
+  inline-size: max-content;
+}
+
+.assessment1 .box {
+  width: 500px;
+  padding: 0.5em;
+}
+
+.assessment1 .float {
   margin: 15px;
   width: 150px;
-  height: 100px;
+  height: 150px;
   border-radius: 5px;
   background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
+.assessment1 .float1 {
+  float: left;
 }
 
-.first {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
-  color: #fff;
+.assessment1 .float2 {
+  float: right;
 }
 
-.second {
+.assessment2 {
+  /* background-color: #fff; */
+  /* color: #333; */
+  /* font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif; */
+  padding: 1em;
+  margin: 0;
+  border: 2px inset black;
+  inline-size: max-content;
+}
+
+.assessment2 .box {
+  width: 500px;
+  padding: 0.5em;
+}
+
+.assessment2 .float {
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
+
+.assessment2 .float {
+  float: left;
+}
+
+.assessment2 .below {
   clear: left;
 }
+
+.assessment3 {
+  /* background-color: #fff; */
+  /* color: #333; */
+  /* font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif; */
+  padding: 1em;
+  margin: 0;
+  border: 2px inset black;
+  inline-size: max-content;
+}
+
+.assessment3 .box {
+  width: 500px;
+  padding: 0.5em;
+}
+
+.assessment3 .float {
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+  float: right;
+}
+
+.assessment3 .box {
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
+  display: flow-root;
+}
+
